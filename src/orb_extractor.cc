@@ -866,7 +866,7 @@ void ORBextractor::operator()(InputArray _image, InputArray _mask,
   Mat image = _image.getMat();
   assert(image.type() == CV_8UC1);
 
-  // Pre-compute the scale pyramid
+  // Pre-compute the scale pyramid, 输出是mvImagePyramid
   ComputePyramid(image);
   //分层计算, 之后每一层是一个vector
   vector<vector<KeyPoint>> allKeypoints;
